@@ -1,0 +1,22 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "middleware",
+    srcs = [
+        "deserialize-user.go",
+        "header.go",
+        "sentinel.go",
+    ],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/common/middleware",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/initializers",
+        "//golangp/common/utils",
+        "//golangp/config",
+        "@com_github_alibaba_sentinel_golang//core/system:go_default_library",
+        "@com_github_alibaba_sentinel_golang_pkg_adapters_gin//:go_default_library",
+        "@com_github_gin_gonic_gin//:go_default_library",
+        "@com_github_toheart_functrace//:go_default_library",
+    ],
+)

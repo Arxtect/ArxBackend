@@ -2,5 +2,5 @@ common --repo_env=GOPROXY=https://goproxy.cn
 common --action_env=GOPROXY=https://goproxy.cn
 common --repo_env=HTTP_PROXY=172.25.96.1:7890
 common --repo_env=HTTPS_PROXY=172.25.96.1:7890
-common --repo_env=GOPRIVATE="github.com/arxtect/*"
-common --action_env=GOPRIVATE="github.com/arxtect/*"
+common --repo_env=GOPRIVATE="github.com/Arxtect/*"
+common --action_env=GOPRIVATE="github.com/Arxtect/*"

@@ -1,3 +1,4 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_test")
 load("@rules_go//go:def.bzl", "go_library")
 
 go_library(
@@ -6,10 +7,14 @@ go_library(
     importpath = "github.com/Arxtect/ArxBackend/golangp/common/xminio",
     visibility = ["//visibility:public"],
     deps = [
-        "@com_github_toheart_functrace//:functrace",
-        #"github.com/minio/minio-go/v7"
-	    #"github.com/minio/minio-go/v7/pkg/credentials"
-        "@com_github_minio_minio_go//:minio",
-        "@com_github_minio_minio_go//pkg/credentials:credentials",
+        "//golangp/config",
+        "@com_github_minio_minio_go_v7//:go_default_library",
+        "@com_github_minio_minio_go_v7//pkg/credentials:go_default_library",
     ],
+)
+
+go_test(
+    name = "xminio_test",
+    srcs = ["object-post_test.go"],
+    embed = [":xminio"],
 )

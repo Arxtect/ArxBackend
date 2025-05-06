@@ -6,6 +6,6 @@ go_library(
     importpath = "github.com/Arxtect/ArxBackend/golangp/common/xhttp",
     visibility = ["//visibility:public"],
     deps = [
-        "@com_github_toheart_functrace//:functrace",
+        "@com_github_toheart_functrace//:go_default_library",
     ],
 )

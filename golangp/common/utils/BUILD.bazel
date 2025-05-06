@@ -1,3 +1,4 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_test")
 load("@rules_go//go:def.bzl", "go_library")
 
 go_library(
@@ -5,4 +6,32 @@ go_library(
     srcs = glob(["**/*.go"]),
     importpath = "github.com/Arxtect/ArxBackend/golangp/common/utils",
     visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/logger",
+        "//golangp/config",
+        "@com_github_golang_jwt_jwt//:go_default_library",
+        "@com_github_k3a_html2text//:go_default_library",
+        "@com_github_smartwalle_alipay_v3//:go_default_library",
+        "@com_github_toheart_functrace//:go_default_library",
+        "@in_gopkg_gomail_v2//:go_default_library",
+        "@org_golang_x_crypto//bcrypt:go_default_library",
+    ],
+)
+
+go_test(
+    name = "utils_test",
+    srcs = [
+        "alipay_test.go",
+        "post_file_test.go",
+        "token_test.go",
+    ],
+    embed = [":utils"],
+    deps = [
+        "//golangp/config",
+        "@com_github_aws_aws_sdk_go//aws:go_default_library",
+        "@com_github_aws_aws_sdk_go//aws/session:go_default_library",
+        "@com_github_aws_aws_sdk_go//service/s3/s3manager:go_default_library",
+        "@com_github_stretchr_testify//assert:go_default_library",
+    ],
 )
