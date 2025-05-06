@@ -1,7 +1,7 @@
 package ws
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
 	"errors"
 	"fmt"
 	"sync"

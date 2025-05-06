@@ -1,7 +1,7 @@
 package initializers
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"context"
 	"log"
 

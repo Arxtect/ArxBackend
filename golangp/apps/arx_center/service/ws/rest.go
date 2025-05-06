@@ -1,9 +1,9 @@
 package ws
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/common/utils"
-	"github.com/arxtect/ArxBackend/golangp/common/xminio"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/common/utils"
+	"github.com/Arxtect/ArxBackend/golangp/common/xminio"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"io"
 	"io/ioutil"
 	"net/http"

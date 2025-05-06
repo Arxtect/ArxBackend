@@ -1,7 +1,7 @@
 package ws
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
 	"errors"
 
 	"github.com/toheart/functrace"

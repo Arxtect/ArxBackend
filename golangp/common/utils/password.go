@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
 	"crypto/rand"
 	"encoding/base32"
 	"fmt"

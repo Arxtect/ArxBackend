@@ -8,7 +8,7 @@ go_library(
         "room.go",
         "subscribers.go",
     ],
-    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/service/ws",
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/service/ws",
     visibility = ["//visibility:public"],
     deps = [
         "//golangp/apps/arx_center/models",

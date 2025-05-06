@@ -1,8 +1,8 @@
 package dify
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"crypto/tls"
 	"fmt"
 	"net/http"

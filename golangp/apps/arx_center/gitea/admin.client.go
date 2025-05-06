@@ -1,7 +1,7 @@
 package gitea
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"fmt"
 
 	"code.gitea.io/sdk/gitea"

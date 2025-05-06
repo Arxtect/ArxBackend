@@ -1,7 +1,7 @@
 package gitea
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 
 	"code.gitea.io/sdk/gitea"
 	"github.com/toheart/functrace"

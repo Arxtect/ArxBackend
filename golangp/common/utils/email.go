@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"bytes"
 	"html/template"
 	"log"

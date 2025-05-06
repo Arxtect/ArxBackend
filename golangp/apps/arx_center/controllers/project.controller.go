@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

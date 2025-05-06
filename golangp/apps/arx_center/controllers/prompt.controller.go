@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/service/dto"
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/service/dto"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
 	"context"
 	"encoding/json"
 	"errors"

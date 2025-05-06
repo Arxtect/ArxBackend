@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/common/initializers"
-	"github.com/arxtect/ArxBackend/golangp/common/utils"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/common/initializers"
+	"github.com/Arxtect/ArxBackend/golangp/common/utils"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"fmt"
 	"net/http"
 	"strings"

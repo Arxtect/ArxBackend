@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/gitea"
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/service/ws"
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
-	"github.com/arxtect/ArxBackend/golangp/common/utils"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/gitea"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/service/ws"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/common/utils"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

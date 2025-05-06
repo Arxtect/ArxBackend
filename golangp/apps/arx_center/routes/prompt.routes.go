@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/controllers"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/controllers"
 
 	"github.com/gin-gonic/gin"
 	"github.com/toheart/functrace"

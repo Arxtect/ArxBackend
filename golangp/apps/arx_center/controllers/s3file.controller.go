@@ -9,9 +9,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/common/xminio"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/common/xminio"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 
 	"github.com/gin-gonic/gin"
 	"github.com/minio/minio-go/v7"

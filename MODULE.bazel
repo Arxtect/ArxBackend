@@ -1,5 +1,5 @@
 """
-Bazel module definition for github.com/arxtect/ArxBackend.
+Bazel module definition for github.com/Arxtect/ArxBackend.
 """
 module(
     name = "arxbackend",

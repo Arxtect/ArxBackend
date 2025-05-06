@@ -1,9 +1,9 @@
 package service_test
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/service"
-	"github.com/arxtect/ArxBackend/golangp/common/initializers"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/service"
+	"github.com/Arxtect/ArxBackend/golangp/common/initializers"
 	"reflect"
 	"testing"
 )

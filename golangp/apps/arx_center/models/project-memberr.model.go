@@ -3,7 +3,7 @@ package models
 import (
 	"errors"
 
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"

@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/controllers"
-	"github.com/arxtect/ArxBackend/golangp/common/middleware"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/controllers"
+	"github.com/Arxtect/ArxBackend/golangp/common/middleware"
 
 	"github.com/gin-gonic/gin"
 	"github.com/toheart/functrace"

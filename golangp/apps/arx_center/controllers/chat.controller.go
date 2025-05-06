@@ -1,11 +1,11 @@
 package controllers
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/models"
-	"github.com/arxtect/ArxBackend/golangp/common/constants"
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
-	openai_config "github.com/arxtect/ArxBackend/golangp/common/openai-config"
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/models"
+	"github.com/Arxtect/ArxBackend/golangp/common/constants"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
+	openai_config "github.com/Arxtect/ArxBackend/golangp/common/openai-config"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"context"
 	"fmt"
 	"io"

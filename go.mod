@@ -1,8 +1,8 @@
-module github.com/arxtect/ArxBackend
+module github.com/Arxtect/ArxBackend
 
 go 1.23.4
 
-replace github.com/arxtect/ArxBackend => .
+replace github.com/Arxtect/ArxBackend => .
 
 require (
 	code.gitea.io/sdk/gitea v0.18.0

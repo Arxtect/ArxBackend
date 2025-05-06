@@ -3,7 +3,7 @@ load("@rules_go//go:def.bzl", "go_library")
 go_library(
     name = "controllers",
     srcs = glob(["**/*.go"]),
-    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/controllers",
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/controllers",
     visibility = ["//visibility:public"],
     deps = [
         "//golangp/apps/arx_center/dify",

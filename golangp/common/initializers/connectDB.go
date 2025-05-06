@@ -1,8 +1,8 @@
 package initializers
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
-	logging "github.com/arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
+	logging "github.com/Arxtect/ArxBackend/golangp/common/logger"
 	"fmt"
 
 	"gorm.io/driver/postgres"

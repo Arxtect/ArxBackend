@@ -3,6 +3,6 @@ load("@rules_go//go:def.bzl", "go_library")
 go_library(
     name = "logger",
     srcs = glob(["**/*.go"]),
-    importpath = "github.com/arxtect/ArxBackend/golangp/common/logger",
+    importpath = "github.com/Arxtect/ArxBackend/golangp/common/logger",
     visibility = ["//visibility:public"],
 )

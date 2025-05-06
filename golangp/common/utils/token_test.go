@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/arxtect/ArxBackend/golangp/config"
+	"github.com/Arxtect/ArxBackend/golangp/config"
 	"log"
 	"testing"
 

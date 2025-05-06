@@ -5,8 +5,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/arxtect/ArxBackend/golangp/apps/arx_center/dify"
-	"github.com/arxtect/ArxBackend/golangp/common/logger"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/dify"
+	"github.com/Arxtect/ArxBackend/golangp/common/logger"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
