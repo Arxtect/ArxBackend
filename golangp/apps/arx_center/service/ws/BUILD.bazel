@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "ws",
+    srcs = [
+        "collaborative.edit.websocket.go",
+        "rest.go",
+        "room.go",
+        "subscribers.go",
+    ],
+    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/service/ws",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/constants",
+        "//golangp/common/utils",
+        "//golangp/common/xminio",
+        "//golangp/config",
+        "@com_github_gin_gonic_gin//:go_default_library",
+        "@com_github_toheart_functrace//:go_default_library",
+        "@org_golang_x_net//websocket",
+    ],
+)

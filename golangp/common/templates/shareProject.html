@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Access Notification</title>
+    <style>
+        body {
+            font-family: "ui-monospace", "sans-serif";
+            color: black !important;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container {
+            background-color: #ffffff;
+            color: black !important;
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+
+        .header {
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        .header h1 {
+            font-size: 30px;
+            color: #008000;
+            margin: 0;
+        }
+
+
+        .content {
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+
+        a {
+            color: #008000;
+            text-decoration: none;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+
+        a:visited {
+            color: #008000;
+        }
+
+
+        a:hover {
+            color: #008000;
+            text-decoration: underline;
+        }
+
+
+        a:active {
+            color: #008000;
+        }
+
+        .arrow-right {
+            margin-left: 10px;
+        }
+
+        .content a.button {
+            display: inline-block;
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none !important;
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .content a.button:hover {
+            background-color: #006400;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .email-display a{
+            margin-top: 14px;
+            color: #008000;
+            word-break: break-word;
+        }
+
+
+        .footer {
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+        .link-display a{
+            margin-top: 12px;
+            color: #008000;
+            word-break: break-word;
+        }
+
+
+        .footer span {
+            display: block;
+        }
+
+        .footer span a {
+            color: #008000;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>arXtect</h1>
+        </div>
+        <div class="content">
+            <p>Hi <strong>{{.AuthorizedUser}}</strong>,</p>
+            <p><strong>{{.SharerUser}}</strong> has invited you to join an <strong>arXtext</strong> project.</p>
+            <p>Project:</p>
+            <p><strong>{{.ProjectName}}</strong></p>
+            <p>Shared By:</p>
+            <p class="email-display"><a href="mailto:{{.SharerEmail}}"><strong>{{.SharerEmail}}</strong></a></p>
+            <p>Please use the link below to view the project:</p>
+            <a href="{{.ProjectLink}}" target="_blank" class="button">Access Project <span
+                    class="arrow-right">&rarr;</span></a>
+            <p>If the button above does not work, copy and paste the following link into your
+                browser:</p>
+            <p class="link-display"><a href="{{.ProjectLink}}">{{.ProjectLink}}</a></p>
+        </div>
+        <div class="footer">
+            <p>This is an automated message. Please do not reply to this email.</p>
+            <span><a href="https://arxtect.com">arXtect.com</a> © 2024 All rights reserved.</span>
+        </div>
+    </div>
+</body>
+
+
+</html>

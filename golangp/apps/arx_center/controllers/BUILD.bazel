@@ -1,0 +1,33 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "controllers",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/controllers",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/dify",
+        "//golangp/apps/arx_center/gitea",
+        "//golangp/apps/arx_center/models",
+        "//golangp/apps/arx_center/service",
+        "//golangp/apps/arx_center/service/dto",
+        "//golangp/apps/arx_center/service/ws",
+        "//golangp/common/constants",
+        "//golangp/common/logger",
+        "//golangp/common/openai-config",
+        "//golangp/common/utils",
+        "//golangp/common/xminio",
+        "//golangp/config",
+        "@com_github_gin_gonic_gin//:go_default_library",
+        "@com_github_go_redis_redis_v8//:go_default_library",
+        "@com_github_google_uuid//:go_default_library",
+        "@com_github_meilisearch_meilisearch_go//:go_default_library",
+        "@com_github_minio_minio_go_v7//:go_default_library",
+        "@com_github_pkoukk_tiktoken_go//:go_default_library",
+        "@com_github_sashabaranov_go_openai//:go_default_library",
+        "@com_github_thanhpk_randstr//:go_default_library",
+        "@com_github_toheart_functrace//:go_default_library",
+        "@io_gorm_gorm//:go_default_library",
+        "@org_golang_x_net//proxy",
+    ],
+)

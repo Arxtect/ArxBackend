@@ -1,0 +1,18 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "initializers",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/common/initializers",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/common/logging:logger",
+        "//golangp/config:config",
+        "@com_github_go_redis_redis_v8//:redis",
+        "@com_github_spf13_viper//:viper",
+        "@com_github_toheart_functrace//:functrace",
+        "@io_gorm_driver_postgres//:postgres",
+        "@io_gorm_gorm//:gorm",
+        "@com_github_meilisearch_meilisearch_go//:meilisearch",
+    ],
+)

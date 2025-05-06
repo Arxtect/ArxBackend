@@ -1,0 +1,31 @@
+"""
+Bazel module definition for github.com/arxtect/ArxBackend.
+"""
+module(
+    name = "arxbackend",
+    version = "0.1.0",
+)
+
+bazel_dep(name = "rules_go", version = "0.50.1", repo_name = "io_bazel_rules_go")
+bazel_dep(name = "gazelle", version = "0.43.0")
+bazel_dep(name = "rules_python", version = "0.40.0")
+
+go = use_extension("@io_bazel_rules_go//go:extensions.bzl", "go")
+use_repo(go, "go_sdk")
+
+gazelle = use_extension("@gazelle//:extensions.bzl", "gazelle")
+gazelle.use_repo()
+
+pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
+pip.parse(
+    hub_name = "pip",
+    requirements_lock = "//:requirements.lock",
+    python_version = "3.12",
+    requirements_txt = "//:requirements.txt",
+)
+use_repo(pip, "pip")
+
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+python.toolchain(
+    python_version = "3.12", 
+)

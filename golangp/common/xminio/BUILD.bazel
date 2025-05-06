@@ -1,0 +1,15 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "xminio",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/common/xminio",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_toheart_functrace//:functrace",
+        #"github.com/minio/minio-go/v7"
+	    #"github.com/minio/minio-go/v7/pkg/credentials"
+        "@com_github_minio_minio_go//:minio",
+        "@com_github_minio_minio_go//pkg/credentials:credentials",
+    ],
+)

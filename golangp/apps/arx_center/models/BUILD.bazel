@@ -1,0 +1,15 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "models",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/models",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/common/constants",
+        "@com_github_google_uuid//:go_default_library",
+        "@com_github_lib_pq//:go_default_library",
+        "@com_github_toheart_functrace//:go_default_library",
+        "@io_gorm_gorm//:go_default_library",
+    ],
+)

@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "gitea",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/gitea",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/common/constants",
+        "//golangp/config",
+        "@com_github_toheart_functrace//:go_default_library",
+        "@io_gitea_code_sdk_gitea//:go_default_library",
+    ],
+)

@@ -1,0 +1,23 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "service",
+    srcs = glob(["**/*.go"]),
+    importpath = "github.com/arxtect/ArxBackend/golangp/apps/arx_center/service",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/initializers",
+        "@com_github_toheart_functrace//:go_default_library",
+    ],
+)
+
+go_test(
+    name = "service_test",
+    srcs = glob(["**_test.go"]),
+    deps = [
+        ":service",
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/initializers",
+    ],
+)
