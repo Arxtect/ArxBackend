@@ -9,7 +9,7 @@ go_test(
     deps = [
         "//golangp/apps/arx_center/controllers",
         "//golangp/apps/arx_center/migrate/model",
-        "@com_github_magiconair_properties//assert:go_default_library",
-        "@com_github_sashabaranov_go_openai//:go_default_library",
+        "@com_github_magiconair_properties//assert",
+        "@com_github_sashabaranov_go_openai//:go-openai",
     ],
 )

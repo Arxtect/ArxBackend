@@ -1,14 +1,14 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_test")
-load("@rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "openai-config",
-    srcs = glob(["**/*.go"]),
+    srcs = [
+        "cli.go",
+        "openai-config.go",
+    ],
     importpath = "github.com/Arxtect/ArxBackend/golangp/common/openai-config",
     visibility = ["//visibility:public"],
-    deps = [
-        "@com_github_toheart_functrace//:go_default_library",
-    ],
+    deps = ["@com_github_toheart_functrace//:functrace"],
 )
 
 go_test(

@@ -1,4 +1,4 @@
-load("@rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "initializers",
@@ -8,9 +8,9 @@ go_library(
     deps = [
         "//golangp/common/logger",
         "//golangp/config",
-        "@com_github_go_redis_redis_v8//:go_default_library",
-        "@com_github_meilisearch_meilisearch_go//:go_default_library",
-        "@io_gorm_driver_postgres//:go_default_library",
-        "@io_gorm_gorm//:go_default_library",
+        "@com_github_go_redis_redis_v8//:redis",
+        "@com_github_meilisearch_meilisearch_go//:meilisearch-go",
+        "@io_gorm_driver_postgres//:postgres",
+        "@io_gorm_gorm//:gorm",
     ],
 )

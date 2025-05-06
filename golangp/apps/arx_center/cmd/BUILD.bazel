@@ -10,6 +10,6 @@ go_library(
         "//golangp/apps/arx_center/cmd/config",
         "//golangp/apps/arx_center/cmd/migration_cmd",
         "//golangp/apps/arx_center/cmd/version",
-        "@com_github_spf13_cobra//:go_default_library",
+        "@com_github_spf13_cobra//:cobra",
     ],
 )

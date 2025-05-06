@@ -13,7 +13,7 @@ go_library(
         "//golangp/common/logger",
         "//golangp/common/utils",
         "//golangp/config",
-        "@com_github_spf13_cobra//:go_default_library",
-        "@io_gorm_gorm//:go_default_library",
+        "@com_github_spf13_cobra//:cobra",
+        "@io_gorm_gorm//:gorm",
     ],
 )

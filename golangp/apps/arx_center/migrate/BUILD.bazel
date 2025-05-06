@@ -12,7 +12,7 @@ go_library(
         "//golangp/common/logger",
         "//golangp/common/utils",
         "//golangp/config",
-        "@io_gorm_gorm//:go_default_library",
+        "@io_gorm_gorm//:gorm",
     ],
 )
 

@@ -1,4 +1,4 @@
-load("@rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 go_library(
     name = "gitea",
@@ -8,7 +8,7 @@ go_library(
     deps = [
         "//golangp/common/constants",
         "//golangp/config",
-        "@com_github_toheart_functrace//:go_default_library",
-        "@io_gitea_code_sdk_gitea//:go_default_library",
+        "@com_github_toheart_functrace//:functrace",
+        "@io_gitea_code_sdk_gitea//:gitea",
     ],
 )

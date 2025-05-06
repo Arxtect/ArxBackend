@@ -10,7 +10,7 @@ go_library(
         "//golangp/apps/arx_center/models",
         "//golangp/common/initializers",
         "//golangp/config",
-        "@io_gorm_gorm//:go_default_library",
+        "@io_gorm_gorm//:gorm",
     ],
 )
 

@@ -12,6 +12,6 @@ go_library(
         "//golangp/common/initializers",
         "//golangp/common/utils",
         "//golangp/config",
-        "@io_gorm_gorm//:go_default_library",
+        "@io_gorm_gorm//:gorm",
     ],
 )
