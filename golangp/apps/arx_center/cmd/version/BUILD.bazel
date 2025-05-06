@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "version",
+    srcs = ["server.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/cmd/version",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/common/constants",
+        "@com_github_spf13_cobra//:go_default_library",
+    ],
+)

@@ -1,25 +1,25 @@
-load("@rules_python//python:defs.bzl", "py_binary")
 load("@pip//:requirements.bzl", "requirement")
+load("@rules_python//python:defs.bzl", "py_binary")
 
 py_binary(
     name = "api_service_binary",
     srcs = [
         "api-service.py",
+        "function.py",
         "main.py",
         "targetTemplateMainTexMapping.py",
         "targetTemplateRecCompileMapping.py",
-        "function.py"
-    ],
-    main = "api-service.py",
-    imports = ["."],
-    deps = [
-         requirement("fastapi"),
-         requirement("uvicorn"),
-         requirement("python-multipart")
     ],
     data = glob(["templates/*.zip"]) + [
-         "targetTemplateMainTexMapping.py",
-         "targetTemplateRecCompileMapping.py",
+        "targetTemplateMainTexMapping.py",
+        "targetTemplateRecCompileMapping.py",
     ],
+    imports = ["."],
+    main = "api-service.py",
     visibility = ["//visibility:public"],
+    deps = [
+        requirement("fastapi"),
+        requirement("uvicorn"),
+        requirement("python-multipart"),
+    ],
 )

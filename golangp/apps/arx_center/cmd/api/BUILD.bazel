@@ -1,0 +1,20 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "api",
+    srcs = ["server.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/cmd/api",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/controllers",
+        "//golangp/apps/arx_center/migrate/motest",
+        "//golangp/apps/arx_center/routes",
+        "//golangp/apps/arx_center/service/ws",
+        "//golangp/common/initializers",
+        "//golangp/common/logger",
+        "//golangp/config",
+        "@com_github_gin_contrib_cors//:go_default_library",
+        "@com_github_gin_gonic_gin//:go_default_library",
+        "@com_github_spf13_cobra//:go_default_library",
+    ],
+)

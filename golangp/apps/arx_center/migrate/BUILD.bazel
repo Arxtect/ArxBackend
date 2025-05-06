@@ -1,0 +1,23 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "migrate_lib",
+    srcs = ["migrate.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/migrate",
+    visibility = ["//visibility:private"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/constants",
+        "//golangp/common/initializers",
+        "//golangp/common/logger",
+        "//golangp/common/utils",
+        "//golangp/config",
+        "@io_gorm_gorm//:go_default_library",
+    ],
+)
+
+go_binary(
+    name = "migrate",
+    embed = [":migrate_lib"],
+    visibility = ["//visibility:public"],
+)

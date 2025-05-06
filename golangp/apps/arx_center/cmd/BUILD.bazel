@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cmd",
+    srcs = ["cobra.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/cmd",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/cmd/api",
+        "//golangp/apps/arx_center/cmd/config",
+        "//golangp/apps/arx_center/cmd/migration_cmd",
+        "//golangp/apps/arx_center/cmd/version",
+        "@com_github_spf13_cobra//:go_default_library",
+    ],
+)

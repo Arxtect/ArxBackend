@@ -1,0 +1,20 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "motest",
+    srcs = [
+        "initdb.go",
+        "motest.go",
+    ],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/migrate/motest",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/constants",
+        "//golangp/common/initializers",
+        "//golangp/common/logger",
+        "//golangp/common/utils",
+        "//golangp/config",
+        "@io_gorm_gorm//:go_default_library",
+    ],
+)

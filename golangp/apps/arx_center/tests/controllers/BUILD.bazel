@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_test")
+
+go_test(
+    name = "controllers_test",
+    srcs = [
+        "chat.controller_test.go",
+        "random.create.user_test.go",
+    ],
+    deps = [
+        "//golangp/apps/arx_center/controllers",
+        "//golangp/apps/arx_center/migrate/model",
+        "@com_github_magiconair_properties//assert:go_default_library",
+        "@com_github_sashabaranov_go_openai//:go_default_library",
+    ],
+)

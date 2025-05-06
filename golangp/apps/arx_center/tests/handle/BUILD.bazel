@@ -1,0 +1,10 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_test")
+
+go_test(
+    name = "handle_test",
+    srcs = ["minio_post_test.go"],
+    deps = [
+        "@com_github_minio_minio_go_v7//:go_default_library",
+        "@com_github_minio_minio_go_v7//pkg/credentials:go_default_library",
+    ],
+)

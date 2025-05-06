@@ -1,6 +1,7 @@
 common --repo_env=GOPROXY=https://goproxy.cn
 common --action_env=GOPROXY=https://goproxy.cn
-common --repo_env=HTTP_PROXY=172.25.96.1:7890
+common --repo_env=HTTP_PROXY=172.25.96.1:7890 # 替换为你的代理地址
 common --repo_env=HTTPS_PROXY=172.25.96.1:7890
+# 需要配置好 git 的SSH密钥
 common --repo_env=GOPRIVATE="github.com/Arxtect/*"
 common --action_env=GOPRIVATE="github.com/Arxtect/*"

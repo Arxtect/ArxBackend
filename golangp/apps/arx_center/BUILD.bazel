@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@rules_go//go:def.bzl", "go_binary")
+
+go_binary(
+    name = "arx_center",
+    embed = [":arx_center_lib"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "arx_center_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center",
+    visibility = ["//visibility:private"],
+    deps = ["//golangp/apps/arx_center/cmd"],
+)

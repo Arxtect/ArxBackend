@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "migration_cmd",
+    srcs = ["migrate.go"],
+    importpath = "github.com/Arxtect/ArxBackend/golangp/apps/arx_center/cmd/migration_cmd",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//golangp/apps/arx_center/migrate/migration_user",
+        "//golangp/apps/arx_center/models",
+        "//golangp/common/constants",
+        "//golangp/common/initializers",
+        "//golangp/common/logger",
+        "//golangp/common/utils",
+        "//golangp/config",
+        "@com_github_spf13_cobra//:go_default_library",
+        "@io_gorm_gorm//:go_default_library",
+    ],
+)

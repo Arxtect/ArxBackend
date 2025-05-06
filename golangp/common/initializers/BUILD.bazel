@@ -10,7 +10,6 @@ go_library(
         "//golangp/config",
         "@com_github_go_redis_redis_v8//:go_default_library",
         "@com_github_meilisearch_meilisearch_go//:go_default_library",
-        "@com_github_toheart_functrace//:go_default_library",
         "@io_gorm_driver_postgres//:go_default_library",
         "@io_gorm_gorm//:go_default_library",
     ],
