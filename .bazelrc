@@ -5,3 +5,6 @@ common --repo_env=HTTPS_PROXY=172.25.96.1:7890
 # 需要配置好 git 的SSH密钥
 common --repo_env=GOPRIVATE="github.com/Arxtect/*"
 common --action_env=GOPRIVATE="github.com/Arxtect/*"
+
+# python api-server port
+common --action_env=PYTHON_API_SERVER_PORT=9002

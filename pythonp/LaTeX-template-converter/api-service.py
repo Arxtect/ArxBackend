@@ -351,4 +351,5 @@ async def convert_latex_endpoint(
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=9002)
+    port = int(os.getenv("UVICORN_PORT", "9002"))  # 默认为9002
+    uvicorn.run(app, host="0.0.0.0", port=port)
