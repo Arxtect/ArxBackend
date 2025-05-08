@@ -6,7 +6,7 @@ This project contains two main services:
 
 ## Prerequisites
 
-- Bazel 6.0+
+- Bazel 8.0+
 - Go 1.23.4
 - Python 3.12
 - Git with SSH configured (for private repos)
