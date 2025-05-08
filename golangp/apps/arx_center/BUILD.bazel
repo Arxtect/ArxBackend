@@ -2,6 +2,12 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_binary(
     name = "arx_center",
+    args = [
+        "server",
+        "-c",
+        "$(rlocationpath //golangp/config:settings-dev.yml)",
+    ],
+    data = ["//golangp/config:settings-dev.yml"],
     embed = [":arx_center_lib"],
     visibility = ["//visibility:public"],
 )

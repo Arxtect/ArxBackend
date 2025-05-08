@@ -10,3 +10,14 @@ go_library(
         "@com_github_toheart_functrace//:functrace",
     ],
 )
+
+filegroup(
+    name = "config_files",
+    srcs = glob(["**/*.yml"]),
+    visibility = ["//visibility:public"],
+)
+
+exports_files(
+    ["settings-dev.yml"],
+    visibility = ["//golangp/apps/arx_center:__pkg__"],
+)

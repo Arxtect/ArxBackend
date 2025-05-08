@@ -1,16 +1,19 @@
 package api
 
 import (
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/controllers"
+	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/migrate/motest"
 	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/routes"
 	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/service/ws"
 	"github.com/Arxtect/ArxBackend/golangp/common/initializers"
 	"github.com/Arxtect/ArxBackend/golangp/common/logger"
 	"github.com/Arxtect/ArxBackend/golangp/config"
-	"github.com/Arxtect/ArxBackend/golangp/apps/arx_center/migrate/motest"
+	rlocation "github.com/bazelbuild/rules_go/go/runfiles"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/cobra"
@@ -44,11 +47,26 @@ func setup() {
 	//1. 读取配置
 
 	log.Println("🚗 Load configuration file ...")
-	err := config.LoadEnv(configYml)
+
+	configPathFromFlag := configYml
+	absoluteRunfilePath, err := rlocation.Rlocation(configPathFromFlag)
+
 	if err != nil {
-		log.Println("🚀 Load failed", err)
+		fmt.Fprintf(os.Stderr, "Failed to find runfile %q: %v\n", configPathFromFlag, err)
+		os.Exit(1)
 		return
 	}
+
+	fmt.Printf("Resolved config file path using rlocation: %s\n", absoluteRunfilePath) // 打印解析后的路径
+
+	err = config.LoadEnv(absoluteRunfilePath)
+
+	if err != nil {
+		log.Println("🚀 Load failed", err)
+		os.Exit(1)
+		return
+	}
+
 	log.Println(`🚗 Loading env is success....`, config.Env.Mode)
 	initializers.ConnectDB(&config.Env)
 	// initializers.InitRedisClient(&config.Env)

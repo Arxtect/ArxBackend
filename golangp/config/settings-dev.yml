@@ -3,8 +3,8 @@ PORT: 8012
 CLIENT_ORIGIN: http://localhost:3001
 # === db ===
 POSTGRES_HOST: localhost
-POSTGRES_USER: einstein
-POSTGRES_PASSWORD: einstein
+POSTGRES_USER: xuyuanmao
+POSTGRES_PASSWORD: chen4212
 POSTGRES_DB: einstein
 POSTGRES_PORT: 5432
 # === bucket ===
