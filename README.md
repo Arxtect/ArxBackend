@@ -36,8 +36,8 @@ common --action_env=GOPRIVATE="github.com/Arxtect/*"
 common --action_env=PYTHON_API_SERVER_PORT=9002
 Running the Services
 ## Option 1: Separate Terminals (Recommended for Development)
-### 1、For the Python API server:
 ```
+### 1、For the Python API server:
 
 ```bash
 # Terminal 1
